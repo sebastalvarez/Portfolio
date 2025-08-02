@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f92faa8c9e89474752a86502f816bc1c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f92faa8c9e89474752a86502f816bc1c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f92faa8c9e89474752a86502f816bc1c = L.map(
+                "map_f92faa8c9e89474752a86502f816bc1c",
+                {
+                    center: [-33.42041047098661, -70.60755484338485],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_be420ec66e723756eaac6f04b4f9c171 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_be420ec66e723756eaac6f04b4f9c171.addTo(map_f92faa8c9e89474752a86502f816bc1c);
+        
+    
+            var circle_99ff3c35248f574d9436ea9895dba6cf = L.circle(
+                [-33.42041047098661, -70.60755484338485],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 3}
+            ).addTo(map_f92faa8c9e89474752a86502f816bc1c);
+        
+    
+            var marker_06183eec5072bf65afdca2f44279e924 = L.marker(
+                [-33.42041047098661, -70.60755484338485],
+                {
+}
+            ).addTo(map_f92faa8c9e89474752a86502f816bc1c);
+        
+    
+            var icon_b92d92937d3ceb7072714fdd05630e3c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bba74906ee5a837e931ac54e5ba5aa1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68c75a17b805b3224b5e62a74426a697 = $(`<div id="html_68c75a17b805b3224b5e62a74426a697" style="width: 100.0%; height: 100.0%;">Initial Point</div>`)[0];
+                popup_bba74906ee5a837e931ac54e5ba5aa1c.setContent(html_68c75a17b805b3224b5e62a74426a697);
+            
+        
+
+        marker_06183eec5072bf65afdca2f44279e924.bindPopup(popup_bba74906ee5a837e931ac54e5ba5aa1c)
+        ;
+
+        
+    
+    
+                marker_06183eec5072bf65afdca2f44279e924.setIcon(icon_b92d92937d3ceb7072714fdd05630e3c);
+            
+    
+            var marker_cluster_0a64948af2c040a16728e43189ed9144 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_23fb708b55e3c8bb3d198c26f2be40f3 = L.marker(
+                [-33.4182154, -70.6014872],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_0df7173da235545b729da6ffa1a7c871 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3594c2955e16c10a4353e788f6cd574a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1054493de9a576d4be78fe5dcde13084 = $(`<div id="html_1054493de9a576d4be78fe5dcde13084" style="width: 100.0%; height: 100.0%;">Tobalaba (station)</div>`)[0];
+                popup_3594c2955e16c10a4353e788f6cd574a.setContent(html_1054493de9a576d4be78fe5dcde13084);
+            
+        
+
+        marker_23fb708b55e3c8bb3d198c26f2be40f3.bindPopup(popup_3594c2955e16c10a4353e788f6cd574a)
+        ;
+
+        
+    
+    
+                marker_23fb708b55e3c8bb3d198c26f2be40f3.setIcon(icon_0df7173da235545b729da6ffa1a7c871);
+            
+    
+            var marker_0271488c775d2808e51b50cdd8db5027 = L.marker(
+                [-33.425483, -70.6137959],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_3b353dcd3bbcca1159a5513e872535c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d97592aeba78356f4e1cf2b07b6f128 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6130636b16025f20ee8bd3a8207becd = $(`<div id="html_b6130636b16025f20ee8bd3a8207becd" style="width: 100.0%; height: 100.0%;">Pedro de Valdivia (station)</div>`)[0];
+                popup_5d97592aeba78356f4e1cf2b07b6f128.setContent(html_b6130636b16025f20ee8bd3a8207becd);
+            
+        
+
+        marker_0271488c775d2808e51b50cdd8db5027.bindPopup(popup_5d97592aeba78356f4e1cf2b07b6f128)
+        ;
+
+        
+    
+    
+                marker_0271488c775d2808e51b50cdd8db5027.setIcon(icon_3b353dcd3bbcca1159a5513e872535c3);
+            
+    
+            var marker_f24164316a140138fcf74bace20474c7 = L.marker(
+                [-33.4219948, -70.6105089],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_640ac5dbb43402a934b4ea5e20d7cdd3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7152b6e6440bc87a187f85f04a3e8c91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75db22b739f4acf397f237c8691a5296 = $(`<div id="html_75db22b739f4acf397f237c8691a5296" style="width: 100.0%; height: 100.0%;">Santa Isabel (supermarket)</div>`)[0];
+                popup_7152b6e6440bc87a187f85f04a3e8c91.setContent(html_75db22b739f4acf397f237c8691a5296);
+            
+        
+
+        marker_f24164316a140138fcf74bace20474c7.bindPopup(popup_7152b6e6440bc87a187f85f04a3e8c91)
+        ;
+
+        
+    
+    
+                marker_f24164316a140138fcf74bace20474c7.setIcon(icon_640ac5dbb43402a934b4ea5e20d7cdd3);
+            
+    
+            var marker_529c722e73e967107ffbed53185daa3a = L.marker(
+                [-33.4241498, -70.616107],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_ce63ce16e951514a8c0506b7af79ed5c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef820d74881f1644ef7db357493f7c17 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2203d253f094cf7ba4e8e6985449650d = $(`<div id="html_2203d253f094cf7ba4e8e6985449650d" style="width: 100.0%; height: 100.0%;">Granjero Productos Naturales (supermarket)</div>`)[0];
+                popup_ef820d74881f1644ef7db357493f7c17.setContent(html_2203d253f094cf7ba4e8e6985449650d);
+            
+        
+
+        marker_529c722e73e967107ffbed53185daa3a.bindPopup(popup_ef820d74881f1644ef7db357493f7c17)
+        ;
+
+        
+    
+    
+                marker_529c722e73e967107ffbed53185daa3a.setIcon(icon_ce63ce16e951514a8c0506b7af79ed5c);
+            
+    
+            var marker_55d2ab1d285c3cd16b4066c9a0e3c660 = L.marker(
+                [-33.4145458, -70.6155294],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_511c0d57011b57ade3d29ab9c3d92309 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1f0e522e3e64370e4f2237392650fe06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d6424870dc51ccbcdb7a471a5b02f2f = $(`<div id="html_9d6424870dc51ccbcdb7a471a5b02f2f" style="width: 100.0%; height: 100.0%;">Oasis (station)</div>`)[0];
+                popup_1f0e522e3e64370e4f2237392650fe06.setContent(html_9d6424870dc51ccbcdb7a471a5b02f2f);
+            
+        
+
+        marker_55d2ab1d285c3cd16b4066c9a0e3c660.bindPopup(popup_1f0e522e3e64370e4f2237392650fe06)
+        ;
+
+        
+    
+    
+                marker_55d2ab1d285c3cd16b4066c9a0e3c660.setIcon(icon_511c0d57011b57ade3d29ab9c3d92309);
+            
+    
+            var marker_1070ab04c7ac78b5716e37635945dc92 = L.marker(
+                [-33.4176924, -70.6054041],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_f0571f81595e5ab9d4225f94b58a6814 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47bec8b45d018b8c7b7eeef18bb0fa42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3982e4b59d8546338d2039addf614248 = $(`<div id="html_3982e4b59d8546338d2039addf614248" style="width: 100.0%; height: 100.0%;">Mall Costanera Center (mall)</div>`)[0];
+                popup_47bec8b45d018b8c7b7eeef18bb0fa42.setContent(html_3982e4b59d8546338d2039addf614248);
+            
+        
+
+        marker_1070ab04c7ac78b5716e37635945dc92.bindPopup(popup_47bec8b45d018b8c7b7eeef18bb0fa42)
+        ;
+
+        
+    
+    
+                marker_1070ab04c7ac78b5716e37635945dc92.setIcon(icon_f0571f81595e5ab9d4225f94b58a6814);
+            
+    
+            var marker_f39b2eb7dc61bc2a64b5b1576f0313c8 = L.marker(
+                [-33.4180565, -70.6072834],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_4d259bba00ba38b7ae6f32f4d0ff3288 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed541fcf699d35957b29533efe81ab24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7289315f8d4213a34d161635ef65fb4d = $(`<div id="html_7289315f8d4213a34d161635ef65fb4d" style="width: 100.0%; height: 100.0%;">Jumbo (supermarket)</div>`)[0];
+                popup_ed541fcf699d35957b29533efe81ab24.setContent(html_7289315f8d4213a34d161635ef65fb4d);
+            
+        
+
+        marker_f39b2eb7dc61bc2a64b5b1576f0313c8.bindPopup(popup_ed541fcf699d35957b29533efe81ab24)
+        ;
+
+        
+    
+    
+                marker_f39b2eb7dc61bc2a64b5b1576f0313c8.setIcon(icon_4d259bba00ba38b7ae6f32f4d0ff3288);
+            
+    
+            var marker_de79db092d2cb46a42e699e4d553fbe0 = L.marker(
+                [-33.4228187, -70.6085252],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_4818a44fa2849752ee728cac67b6fcb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc8a132dbbf070712ed03341fb3ef71c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2d7ed34dbcf183fe00663337ca1eb90 = $(`<div id="html_b2d7ed34dbcf183fe00663337ca1eb90" style="width: 100.0%; height: 100.0%;">Lider Express (supermarket)</div>`)[0];
+                popup_cc8a132dbbf070712ed03341fb3ef71c.setContent(html_b2d7ed34dbcf183fe00663337ca1eb90);
+            
+        
+
+        marker_de79db092d2cb46a42e699e4d553fbe0.bindPopup(popup_cc8a132dbbf070712ed03341fb3ef71c)
+        ;
+
+        
+    
+    
+                marker_de79db092d2cb46a42e699e4d553fbe0.setIcon(icon_4818a44fa2849752ee728cac67b6fcb6);
+            
+    
+            var marker_9e6e2475026045f06e4375d959b763d3 = L.marker(
+                [-33.4164157, -70.600686],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_92379d78ce06eeda01d2678a18e35aeb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_666f28b7398793a19a848b0381377259 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48bc3b2c53fd4a4f753fbc2b0e771f34 = $(`<div id="html_48bc3b2c53fd4a4f753fbc2b0e771f34" style="width: 100.0%; height: 100.0%;">Vidaintegra (clinic)</div>`)[0];
+                popup_666f28b7398793a19a848b0381377259.setContent(html_48bc3b2c53fd4a4f753fbc2b0e771f34);
+            
+        
+
+        marker_9e6e2475026045f06e4375d959b763d3.bindPopup(popup_666f28b7398793a19a848b0381377259)
+        ;
+
+        
+    
+    
+                marker_9e6e2475026045f06e4375d959b763d3.setIcon(icon_92379d78ce06eeda01d2678a18e35aeb);
+            
+    
+            var marker_d4d984286b9e46064fd80460dc47377c = L.marker(
+                [-33.4250727, -70.6131696],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_42ef1f64ac1e1c64045c5353ea546dbf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c40d25daa2f84df495fff11019d201f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae9e80530bf53a7b5ae176bbce7673a0 = $(`<div id="html_ae9e80530bf53a7b5ae176bbce7673a0" style="width: 100.0%; height: 100.0%;">Centro Médico y Dental RedSalud (clinic)</div>`)[0];
+                popup_2c40d25daa2f84df495fff11019d201f.setContent(html_ae9e80530bf53a7b5ae176bbce7673a0);
+            
+        
+
+        marker_d4d984286b9e46064fd80460dc47377c.bindPopup(popup_2c40d25daa2f84df495fff11019d201f)
+        ;
+
+        
+    
+    
+                marker_d4d984286b9e46064fd80460dc47377c.setIcon(icon_42ef1f64ac1e1c64045c5353ea546dbf);
+            
+    
+            var marker_6f433261236323c589a5ca259876db7e = L.marker(
+                [-33.4207989, -70.6115974],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_636ce9407e6d79440dbba0f75da22d30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5ea34b729fcae05b1b90fd7a7113101b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6324685b507d0ca63d71d768c397c4d = $(`<div id="html_a6324685b507d0ca63d71d768c397c4d" style="width: 100.0%; height: 100.0%;">Clinic oftalmologica Providencia (clinic)</div>`)[0];
+                popup_5ea34b729fcae05b1b90fd7a7113101b.setContent(html_a6324685b507d0ca63d71d768c397c4d);
+            
+        
+
+        marker_6f433261236323c589a5ca259876db7e.bindPopup(popup_5ea34b729fcae05b1b90fd7a7113101b)
+        ;
+
+        
+    
+    
+                marker_6f433261236323c589a5ca259876db7e.setIcon(icon_636ce9407e6d79440dbba0f75da22d30);
+            
+    
+            var marker_4e8e531dbcc2fd7eb164d1e4e449b29c = L.marker(
+                [-33.422019, -70.6085607],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_37c06c116d739d0b0f4880bd1e0b05f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82dd0669c1cddf3865d0511cecaddf5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d40b1dc249fe926fcf98850929e76141 = $(`<div id="html_d40b1dc249fe926fcf98850929e76141" style="width: 100.0%; height: 100.0%;">Los Leones (station)</div>`)[0];
+                popup_82dd0669c1cddf3865d0511cecaddf5c.setContent(html_d40b1dc249fe926fcf98850929e76141);
+            
+        
+
+        marker_4e8e531dbcc2fd7eb164d1e4e449b29c.bindPopup(popup_82dd0669c1cddf3865d0511cecaddf5c)
+        ;
+
+        
+    
+    
+                marker_4e8e531dbcc2fd7eb164d1e4e449b29c.setIcon(icon_37c06c116d739d0b0f4880bd1e0b05f0);
+            
+    
+            var marker_ac721df9d09a7d14f6994004868a12fb = L.marker(
+                [-33.4204771, -70.6073417],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_562fac19012a73720c29c90ef8b6b3be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08b86897104dc132d8b7f432740f9e1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c22b4c111428c053f0d5ff4503c6691 = $(`<div id="html_2c22b4c111428c053f0d5ff4503c6691" style="width: 100.0%; height: 100.0%;">Chinese Mark (supermarket)</div>`)[0];
+                popup_08b86897104dc132d8b7f432740f9e1b.setContent(html_2c22b4c111428c053f0d5ff4503c6691);
+            
+        
+
+        marker_ac721df9d09a7d14f6994004868a12fb.bindPopup(popup_08b86897104dc132d8b7f432740f9e1b)
+        ;
+
+        
+    
+    
+                marker_ac721df9d09a7d14f6994004868a12fb.setIcon(icon_562fac19012a73720c29c90ef8b6b3be);
+            
+    
+            var marker_5142701c1cdd4a2440d669943a0ea079 = L.marker(
+                [-33.4188061, -70.602438],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_af3e17aebbdacaffe1f3b90186a9ae60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0784c7c88aa948d1d0512e822bc49151 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0439f343b7c81bcb2758887c0589fb71 = $(`<div id="html_0439f343b7c81bcb2758887c0589fb71" style="width: 100.0%; height: 100.0%;">Galería Munchen (mall)</div>`)[0];
+                popup_0784c7c88aa948d1d0512e822bc49151.setContent(html_0439f343b7c81bcb2758887c0589fb71);
+            
+        
+
+        marker_5142701c1cdd4a2440d669943a0ea079.bindPopup(popup_0784c7c88aa948d1d0512e822bc49151)
+        ;
+
+        
+    
+    
+                marker_5142701c1cdd4a2440d669943a0ea079.setIcon(icon_af3e17aebbdacaffe1f3b90186a9ae60);
+            
+    
+            var marker_0c7e0c7efe75c942b170de2208e93657 = L.marker(
+                [-33.4201401, -70.6086328],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_eae7e185d50905de15071c6cef2f707a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_764063779a2263d9e3b0172131b239c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1516dcd6c6b0a315227c37e11e56781 = $(`<div id="html_b1516dcd6c6b0a315227c37e11e56781" style="width: 100.0%; height: 100.0%;">Mini Market Matin (marketplace)</div>`)[0];
+                popup_764063779a2263d9e3b0172131b239c9.setContent(html_b1516dcd6c6b0a315227c37e11e56781);
+            
+        
+
+        marker_0c7e0c7efe75c942b170de2208e93657.bindPopup(popup_764063779a2263d9e3b0172131b239c9)
+        ;
+
+        
+    
+    
+                marker_0c7e0c7efe75c942b170de2208e93657.setIcon(icon_eae7e185d50905de15071c6cef2f707a);
+            
+    
+            var marker_1def26b1462a0ced0524c9c3a9ab88a0 = L.marker(
+                [-33.419876, -70.6092226],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_dc441460c6058c67d5a2302e819fce1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f3c8e5f95accfe57de8ede5529d664e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_43570373cad3dd178beaf9e066680be0 = $(`<div id="html_43570373cad3dd178beaf9e066680be0" style="width: 100.0%; height: 100.0%;">Clínica Le Ciel (clinic)</div>`)[0];
+                popup_8f3c8e5f95accfe57de8ede5529d664e.setContent(html_43570373cad3dd178beaf9e066680be0);
+            
+        
+
+        marker_1def26b1462a0ced0524c9c3a9ab88a0.bindPopup(popup_8f3c8e5f95accfe57de8ede5529d664e)
+        ;
+
+        
+    
+    
+                marker_1def26b1462a0ced0524c9c3a9ab88a0.setIcon(icon_dc441460c6058c67d5a2302e819fce1b);
+            
+    
+            var marker_2a146f449ad0c3b10fe81e04c350a7a6 = L.marker(
+                [-33.4191849, -70.6091191],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_0a31995ac750bb0294fc16b8a5389119 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f04c9a6587d3c955f702599690461ad9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fffd9d851a4ab3291095d1e34f7b14df = $(`<div id="html_fffd9d851a4ab3291095d1e34f7b14df" style="width: 100.0%; height: 100.0%;">Convatec Medical Care (clinic)</div>`)[0];
+                popup_f04c9a6587d3c955f702599690461ad9.setContent(html_fffd9d851a4ab3291095d1e34f7b14df);
+            
+        
+
+        marker_2a146f449ad0c3b10fe81e04c350a7a6.bindPopup(popup_f04c9a6587d3c955f702599690461ad9)
+        ;
+
+        
+    
+    
+                marker_2a146f449ad0c3b10fe81e04c350a7a6.setIcon(icon_0a31995ac750bb0294fc16b8a5389119);
+            
+    
+            var marker_fc065bf74be3c2da758764daa4ab51a7 = L.marker(
+                [-33.4187713, -70.6090589],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_51303b9fbcd010328f6d77a072a155ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cc753c439165440f548edf457db6392 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c159604d7aca6ede317be9ea2fdef90 = $(`<div id="html_6c159604d7aca6ede317be9ea2fdef90" style="width: 100.0%; height: 100.0%;">Clínica Somno (clinic)</div>`)[0];
+                popup_5cc753c439165440f548edf457db6392.setContent(html_6c159604d7aca6ede317be9ea2fdef90);
+            
+        
+
+        marker_fc065bf74be3c2da758764daa4ab51a7.bindPopup(popup_5cc753c439165440f548edf457db6392)
+        ;
+
+        
+    
+    
+                marker_fc065bf74be3c2da758764daa4ab51a7.setIcon(icon_51303b9fbcd010328f6d77a072a155ba);
+            
+    
+            var marker_398fc670e086989f4fa9c6e33e7a47e2 = L.marker(
+                [-33.4196886, -70.6062448],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_47e37d5df79e3478fe99372016fcbeaf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a596c4f206257a0c8210cedc78aa07c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_270f4d2e9c7fe785ad6511a45ed02f37 = $(`<div id="html_270f4d2e9c7fe785ad6511a45ed02f37" style="width: 100.0%; height: 100.0%;">Tostaduría (marketplace)</div>`)[0];
+                popup_3a596c4f206257a0c8210cedc78aa07c.setContent(html_270f4d2e9c7fe785ad6511a45ed02f37);
+            
+        
+
+        marker_398fc670e086989f4fa9c6e33e7a47e2.bindPopup(popup_3a596c4f206257a0c8210cedc78aa07c)
+        ;
+
+        
+    
+    
+                marker_398fc670e086989f4fa9c6e33e7a47e2.setIcon(icon_47e37d5df79e3478fe99372016fcbeaf);
+            
+    
+            var marker_7a2fc1bfe62cbc8878017cacdc02302c = L.marker(
+                [-33.4187966, -70.6077831],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_62195970fbb4170139e7798d3e970163 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b2bc65bc84e1ace0cd98f7bdcce19cdd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a9884ae7018d739c3e14f17144cfd23 = $(`<div id="html_1a9884ae7018d739c3e14f17144cfd23" style="width: 100.0%; height: 100.0%;">Botilleria y Minimarket (marketplace)</div>`)[0];
+                popup_b2bc65bc84e1ace0cd98f7bdcce19cdd.setContent(html_1a9884ae7018d739c3e14f17144cfd23);
+            
+        
+
+        marker_7a2fc1bfe62cbc8878017cacdc02302c.bindPopup(popup_b2bc65bc84e1ace0cd98f7bdcce19cdd)
+        ;
+
+        
+    
+    
+                marker_7a2fc1bfe62cbc8878017cacdc02302c.setIcon(icon_62195970fbb4170139e7798d3e970163);
+            
+    
+            var marker_344290d2e95142610de551f63ad3cb5d = L.marker(
+                [-33.4123789, -70.6028435],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_a2104d5544ba61fa71188e6512422e23 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d5b9943e213b936af59a96d081332b37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e66969c67d813bb38a7c74951565d06d = $(`<div id="html_e66969c67d813bb38a7c74951565d06d" style="width: 100.0%; height: 100.0%;">no name (clinic)</div>`)[0];
+                popup_d5b9943e213b936af59a96d081332b37.setContent(html_e66969c67d813bb38a7c74951565d06d);
+            
+        
+
+        marker_344290d2e95142610de551f63ad3cb5d.bindPopup(popup_d5b9943e213b936af59a96d081332b37)
+        ;
+
+        
+    
+    
+                marker_344290d2e95142610de551f63ad3cb5d.setIcon(icon_a2104d5544ba61fa71188e6512422e23);
+            
+    
+            var marker_5dba0395f26ca9bdc878510e102a2800 = L.marker(
+                [-33.423001, -70.6079635],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_372f79303fc0345de0cb57019a5b8601 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b257287926ad8f2dbd50936f580aaf47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce893bcf90070abe6e8b7c313714d365 = $(`<div id="html_ce893bcf90070abe6e8b7c313714d365" style="width: 100.0%; height: 100.0%;">China House Market (supermarket)</div>`)[0];
+                popup_b257287926ad8f2dbd50936f580aaf47.setContent(html_ce893bcf90070abe6e8b7c313714d365);
+            
+        
+
+        marker_5dba0395f26ca9bdc878510e102a2800.bindPopup(popup_b257287926ad8f2dbd50936f580aaf47)
+        ;
+
+        
+    
+    
+                marker_5dba0395f26ca9bdc878510e102a2800.setIcon(icon_372f79303fc0345de0cb57019a5b8601);
+            
+    
+            var marker_8ca9c4d37ba4297bbb704457aa0c3a35 = L.marker(
+                [-33.4200933, -70.6080622],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_cf980de447a45d40602e26e91f8582c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d4a8b0f5a627d0a212db3110d3d5c40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_807eb524dcef2b5887a4edf873ec11f0 = $(`<div id="html_807eb524dcef2b5887a4edf873ec11f0" style="width: 100.0%; height: 100.0%;">Spid (supermarket)</div>`)[0];
+                popup_2d4a8b0f5a627d0a212db3110d3d5c40.setContent(html_807eb524dcef2b5887a4edf873ec11f0);
+            
+        
+
+        marker_8ca9c4d37ba4297bbb704457aa0c3a35.bindPopup(popup_2d4a8b0f5a627d0a212db3110d3d5c40)
+        ;
+
+        
+    
+    
+                marker_8ca9c4d37ba4297bbb704457aa0c3a35.setIcon(icon_cf980de447a45d40602e26e91f8582c7);
+            
+    
+            var marker_1615e9fae3e160e28541b4c8ddd63e58 = L.marker(
+                [-33.4233767, -70.6099332],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_0c473217623ec0e1c03d081d0f0ebc8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5bcd3be80957b996aa007285c1099f69 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ecc87cc880de4cbab0296e95c3ed10a1 = $(`<div id="html_ecc87cc880de4cbab0296e95c3ed10a1" style="width: 100.0%; height: 100.0%;">Vivo Panorámico (mall)</div>`)[0];
+                popup_5bcd3be80957b996aa007285c1099f69.setContent(html_ecc87cc880de4cbab0296e95c3ed10a1);
+            
+        
+
+        marker_1615e9fae3e160e28541b4c8ddd63e58.bindPopup(popup_5bcd3be80957b996aa007285c1099f69)
+        ;
+
+        
+    
+    
+                marker_1615e9fae3e160e28541b4c8ddd63e58.setIcon(icon_0c473217623ec0e1c03d081d0f0ebc8e);
+            
+    
+            var marker_588a29684e99f81da190bac84c3a63bf = L.marker(
+                [-33.4165416, -70.6007615],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_a45251aa3ff0bfc5aea2d40e783e093e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4999f86102bd42bc3f96cb9f99be4389 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8d5141adb9f0f9396cc308c6bcc2e90 = $(`<div id="html_d8d5141adb9f0f9396cc308c6bcc2e90" style="width: 100.0%; height: 100.0%;">Centro Médico Dávila Las Condes (clinic)</div>`)[0];
+                popup_4999f86102bd42bc3f96cb9f99be4389.setContent(html_d8d5141adb9f0f9396cc308c6bcc2e90);
+            
+        
+
+        marker_588a29684e99f81da190bac84c3a63bf.bindPopup(popup_4999f86102bd42bc3f96cb9f99be4389)
+        ;
+
+        
+    
+    
+                marker_588a29684e99f81da190bac84c3a63bf.setIcon(icon_a45251aa3ff0bfc5aea2d40e783e093e);
+            
+    
+            var marker_6de479d31226e1846d6814a204696381 = L.marker(
+                [-33.4188594, -70.6051128],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_d8da1016c10e493dd5bc2a8f9bd00d8a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f66b18d15e65fb51db22a1c05306c57f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de08e615b49804c1a03701fad78cf6c7 = $(`<div id="html_de08e615b49804c1a03701fad78cf6c7" style="width: 100.0%; height: 100.0%;">Hospital Metropolitano (hospital)</div>`)[0];
+                popup_f66b18d15e65fb51db22a1c05306c57f.setContent(html_de08e615b49804c1a03701fad78cf6c7);
+            
+        
+
+        marker_6de479d31226e1846d6814a204696381.bindPopup(popup_f66b18d15e65fb51db22a1c05306c57f)
+        ;
+
+        
+    
+    
+                marker_6de479d31226e1846d6814a204696381.setIcon(icon_d8da1016c10e493dd5bc2a8f9bd00d8a);
+            
+    
+            var marker_f13251fc9a4aa8c551e708a00f49e014 = L.marker(
+                [-33.4180008, -70.6067395],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_81df89c4f98de00f2c8ba2dd2dca22ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16429c3454d7077082c3aa1ac6ce4371 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f061cc9ab3ae355353a4da6d18540812 = $(`<div id="html_f061cc9ab3ae355353a4da6d18540812" style="width: 100.0%; height: 100.0%;">Cenco Costanera (mall)</div>`)[0];
+                popup_16429c3454d7077082c3aa1ac6ce4371.setContent(html_f061cc9ab3ae355353a4da6d18540812);
+            
+        
+
+        marker_f13251fc9a4aa8c551e708a00f49e014.bindPopup(popup_16429c3454d7077082c3aa1ac6ce4371)
+        ;
+
+        
+    
+    
+                marker_f13251fc9a4aa8c551e708a00f49e014.setIcon(icon_81df89c4f98de00f2c8ba2dd2dca22ca);
+            
+    
+            var marker_471325b7201d508c40d0818288bbdfe4 = L.marker(
+                [-33.421488, -70.5975097],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_82a07f81cb5a2b09c31b8c5499c1b784 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "gas-pump",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_deb32f0ad57575fabf8e9aa2be2144e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03e8c6913be3807ab73c7427c05453fb = $(`<div id="html_03e8c6913be3807ab73c7427c05453fb" style="width: 100.0%; height: 100.0%;">Copec (fuel)</div>`)[0];
+                popup_deb32f0ad57575fabf8e9aa2be2144e7.setContent(html_03e8c6913be3807ab73c7427c05453fb);
+            
+        
+
+        marker_471325b7201d508c40d0818288bbdfe4.bindPopup(popup_deb32f0ad57575fabf8e9aa2be2144e7)
+        ;
+
+        
+    
+    
+                marker_471325b7201d508c40d0818288bbdfe4.setIcon(icon_82a07f81cb5a2b09c31b8c5499c1b784);
+            
+    
+            var marker_84a89b61784e48d83507ac3d72d3fc0a = L.marker(
+                [-33.4240437, -70.6045915],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_4e58681954a3655bb4674deeaa697e45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f41260df3d30e906ef61735cd49f0be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c65d5d9f02968559175bcd59fd04948 = $(`<div id="html_3c65d5d9f02968559175bcd59fd04948" style="width: 100.0%; height: 100.0%;">Clínica NovaLight, Cirugía plástica (clinic)</div>`)[0];
+                popup_8f41260df3d30e906ef61735cd49f0be.setContent(html_3c65d5d9f02968559175bcd59fd04948);
+            
+        
+
+        marker_84a89b61784e48d83507ac3d72d3fc0a.bindPopup(popup_8f41260df3d30e906ef61735cd49f0be)
+        ;
+
+        
+    
+    
+                marker_84a89b61784e48d83507ac3d72d3fc0a.setIcon(icon_4e58681954a3655bb4674deeaa697e45);
+            
+    
+            var marker_65d6d28d1b1e3d6966fbda9650435c6c = L.marker(
+                [-33.4234185, -70.6048159],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_1f3a64f64a4155fc890e9b3a9f449965 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e8d5d7fabe3f9a0a68b3e83ac05f2499 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f3cb54a971695d865b5aa956acda5f0 = $(`<div id="html_4f3cb54a971695d865b5aa956acda5f0" style="width: 100.0%; height: 100.0%;">Clínica Oftalmológica (clinic)</div>`)[0];
+                popup_e8d5d7fabe3f9a0a68b3e83ac05f2499.setContent(html_4f3cb54a971695d865b5aa956acda5f0);
+            
+        
+
+        marker_65d6d28d1b1e3d6966fbda9650435c6c.bindPopup(popup_e8d5d7fabe3f9a0a68b3e83ac05f2499)
+        ;
+
+        
+    
+    
+                marker_65d6d28d1b1e3d6966fbda9650435c6c.setIcon(icon_1f3a64f64a4155fc890e9b3a9f449965);
+            
+    
+            var marker_d9833d070b1363ad078c1042b1644403 = L.marker(
+                [-33.4254313, -70.6120682],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_839017c9a08ecc59b8b5501521870a7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88ad9bc56d2179dbd8c39bac58c77dd7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2117f5c22a555b569d6e6854a531e31 = $(`<div id="html_f2117f5c22a555b569d6e6854a531e31" style="width: 100.0%; height: 100.0%;">Sanasalud (clinic)</div>`)[0];
+                popup_88ad9bc56d2179dbd8c39bac58c77dd7.setContent(html_f2117f5c22a555b569d6e6854a531e31);
+            
+        
+
+        marker_d9833d070b1363ad078c1042b1644403.bindPopup(popup_88ad9bc56d2179dbd8c39bac58c77dd7)
+        ;
+
+        
+    
+    
+                marker_d9833d070b1363ad078c1042b1644403.setIcon(icon_839017c9a08ecc59b8b5501521870a7e);
+            
+    
+            var marker_835bf91df5aa9324e3ce37f8718f5456 = L.marker(
+                [-33.4278703, -70.6110705],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_f4d98251daddbfa13402803b9076f042 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dce2bd192dfdfd75955849642502fb13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa7be7a60ae8d46de240bc980c5bd4e9 = $(`<div id="html_aa7be7a60ae8d46de240bc980c5bd4e9" style="width: 100.0%; height: 100.0%;">Clínica Europa (clinic)</div>`)[0];
+                popup_dce2bd192dfdfd75955849642502fb13.setContent(html_aa7be7a60ae8d46de240bc980c5bd4e9);
+            
+        
+
+        marker_835bf91df5aa9324e3ce37f8718f5456.bindPopup(popup_dce2bd192dfdfd75955849642502fb13)
+        ;
+
+        
+    
+    
+                marker_835bf91df5aa9324e3ce37f8718f5456.setIcon(icon_f4d98251daddbfa13402803b9076f042);
+            
+    
+            var marker_b950e0524f618ccbb40cc88fba52a452 = L.marker(
+                [-33.412864, -70.6079905],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_9965d8fe0ff538459c13c0b33e70de04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f5a34105a4fecb4a65cdb0c775748af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64948f53a2059c30a641206297ab383b = $(`<div id="html_64948f53a2059c30a641206297ab383b" style="width: 100.0%; height: 100.0%;">Clínica Traumatológica Los Conquistadores (clinic)</div>`)[0];
+                popup_4f5a34105a4fecb4a65cdb0c775748af.setContent(html_64948f53a2059c30a641206297ab383b);
+            
+        
+
+        marker_b950e0524f618ccbb40cc88fba52a452.bindPopup(popup_4f5a34105a4fecb4a65cdb0c775748af)
+        ;
+
+        
+    
+    
+                marker_b950e0524f618ccbb40cc88fba52a452.setIcon(icon_9965d8fe0ff538459c13c0b33e70de04);
+            
+    
+            var marker_54262a3c6634162678ef4b7023948ab0 = L.marker(
+                [-33.4166674, -70.6043565],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_7f91a4ac911878ccd3c6cec2ebbe21ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_525ac5f09545bbbf9a5d0b0778e3893b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e5fbfe566158c35f770e5a9b4ed0789 = $(`<div id="html_8e5fbfe566158c35f770e5a9b4ed0789" style="width: 100.0%; height: 100.0%;">Cruz Roja Chilena (clinic)</div>`)[0];
+                popup_525ac5f09545bbbf9a5d0b0778e3893b.setContent(html_8e5fbfe566158c35f770e5a9b4ed0789);
+            
+        
+
+        marker_54262a3c6634162678ef4b7023948ab0.bindPopup(popup_525ac5f09545bbbf9a5d0b0778e3893b)
+        ;
+
+        
+    
+    
+                marker_54262a3c6634162678ef4b7023948ab0.setIcon(icon_7f91a4ac911878ccd3c6cec2ebbe21ce);
+            
+    
+            var marker_3c7fb6872b57a7a0916634f86437b422 = L.marker(
+                [-33.4209889, -70.6165453],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_87e6a4efa3cdd19c6bc0f21ead2eafe6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d1c8deb84db62aae755b57e4b2df80c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e823684d9ecf5ad2e876b84ad8f57fe3 = $(`<div id="html_e823684d9ecf5ad2e876b84ad8f57fe3" style="width: 100.0%; height: 100.0%;">Clínica Indisa - Centro Médico Los Españoles (clinic)</div>`)[0];
+                popup_1d1c8deb84db62aae755b57e4b2df80c.setContent(html_e823684d9ecf5ad2e876b84ad8f57fe3);
+            
+        
+
+        marker_3c7fb6872b57a7a0916634f86437b422.bindPopup(popup_1d1c8deb84db62aae755b57e4b2df80c)
+        ;
+
+        
+    
+    
+                marker_3c7fb6872b57a7a0916634f86437b422.setIcon(icon_87e6a4efa3cdd19c6bc0f21ead2eafe6);
+            
+    
+            var marker_627ad60ce39069054479dc58aba905d9 = L.marker(
+                [-33.4207502, -70.6070734],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_76d059559cf4ec6df5f0431c71a1ea16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de97571154d0e4e8c94046e9b735bc1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c9814ca3fb69fcda165251d4ae58d85 = $(`<div id="html_3c9814ca3fb69fcda165251d4ae58d85" style="width: 100.0%; height: 100.0%;">Vida Integra (clinic)</div>`)[0];
+                popup_de97571154d0e4e8c94046e9b735bc1c.setContent(html_3c9814ca3fb69fcda165251d4ae58d85);
+            
+        
+
+        marker_627ad60ce39069054479dc58aba905d9.bindPopup(popup_de97571154d0e4e8c94046e9b735bc1c)
+        ;
+
+        
+    
+    
+                marker_627ad60ce39069054479dc58aba905d9.setIcon(icon_76d059559cf4ec6df5f0431c71a1ea16);
+            
+    
+            var marker_49f9e154698bed3264619b2bdc85170e = L.marker(
+                [-33.4265281, -70.602004],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_eccd6fcef71b0310cb731c032fd1b556 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "gas-pump",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d03306e2cdf18b0de0ae83a31674d36 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_617e7cbd401d00620082d959ea00b6a3 = $(`<div id="html_617e7cbd401d00620082d959ea00b6a3" style="width: 100.0%; height: 100.0%;">Shell (fuel)</div>`)[0];
+                popup_3d03306e2cdf18b0de0ae83a31674d36.setContent(html_617e7cbd401d00620082d959ea00b6a3);
+            
+        
+
+        marker_49f9e154698bed3264619b2bdc85170e.bindPopup(popup_3d03306e2cdf18b0de0ae83a31674d36)
+        ;
+
+        
+    
+    
+                marker_49f9e154698bed3264619b2bdc85170e.setIcon(icon_eccd6fcef71b0310cb731c032fd1b556);
+            
+    
+            var marker_c9edc312f4cf0ef1ccfc3cbd9464008f = L.marker(
+                [-33.4246118, -70.6104395],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_73fd9e1f1aaf7961385977643668b7a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba8a11dce84f88cc984e14a5dc889a9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e24862e1f19887532d6f2503508d37db = $(`<div id="html_e24862e1f19887532d6f2503508d37db" style="width: 100.0%; height: 100.0%;">Integramédica Barcelona (clinic)</div>`)[0];
+                popup_ba8a11dce84f88cc984e14a5dc889a9e.setContent(html_e24862e1f19887532d6f2503508d37db);
+            
+        
+
+        marker_c9edc312f4cf0ef1ccfc3cbd9464008f.bindPopup(popup_ba8a11dce84f88cc984e14a5dc889a9e)
+        ;
+
+        
+    
+    
+                marker_c9edc312f4cf0ef1ccfc3cbd9464008f.setIcon(icon_73fd9e1f1aaf7961385977643668b7a7);
+            
+    
+            var marker_3ddd50408f0902b9b5fb3767a967b45b = L.marker(
+                [-33.4211292, -70.6183664],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_5a1b07e9784197c3dd41f376d6f99a84 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc542466c463eb82023a7708faae333d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7be07b635a0d67ac0dc550f33f18b27 = $(`<div id="html_d7be07b635a0d67ac0dc550f33f18b27" style="width: 100.0%; height: 100.0%;">Clínica Indisa (hospital)</div>`)[0];
+                popup_bc542466c463eb82023a7708faae333d.setContent(html_d7be07b635a0d67ac0dc550f33f18b27);
+            
+        
+
+        marker_3ddd50408f0902b9b5fb3767a967b45b.bindPopup(popup_bc542466c463eb82023a7708faae333d)
+        ;
+
+        
+    
+    
+                marker_3ddd50408f0902b9b5fb3767a967b45b.setIcon(icon_5a1b07e9784197c3dd41f376d6f99a84);
+            
+    
+            var marker_942aee8147c303e17298df82b2ef679e = L.marker(
+                [-33.4248526, -70.610707],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_9b970ca446e637f0e114a88a5b508d5b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33dcada08f306e79884f8e211c5f7c7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8409c8f0b85c862fb656f4098ffc36cb = $(`<div id="html_8409c8f0b85c862fb656f4098ffc36cb" style="width: 100.0%; height: 100.0%;">Integramédica Barcelona (Torre 2) (clinic)</div>`)[0];
+                popup_33dcada08f306e79884f8e211c5f7c7b.setContent(html_8409c8f0b85c862fb656f4098ffc36cb);
+            
+        
+
+        marker_942aee8147c303e17298df82b2ef679e.bindPopup(popup_33dcada08f306e79884f8e211c5f7c7b)
+        ;
+
+        
+    
+    
+                marker_942aee8147c303e17298df82b2ef679e.setIcon(icon_9b970ca446e637f0e114a88a5b508d5b);
+            
+    
+            var marker_eecb31a74c9ab9f100bc3de5a05f6776 = L.marker(
+                [-33.4123062, -70.6075484],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_5d1e5a30b33dcd1d893ee73f6c0a2543 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "gas-pump",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_09f75cef9d344e9a10ae05a2362889ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1026f96436dbb72bb8f4afd52529596 = $(`<div id="html_a1026f96436dbb72bb8f4afd52529596" style="width: 100.0%; height: 100.0%;">Shell (fuel)</div>`)[0];
+                popup_09f75cef9d344e9a10ae05a2362889ba.setContent(html_a1026f96436dbb72bb8f4afd52529596);
+            
+        
+
+        marker_eecb31a74c9ab9f100bc3de5a05f6776.bindPopup(popup_09f75cef9d344e9a10ae05a2362889ba)
+        ;
+
+        
+    
+    
+                marker_eecb31a74c9ab9f100bc3de5a05f6776.setIcon(icon_5d1e5a30b33dcd1d893ee73f6c0a2543);
+            
+    
+            var marker_e0fa07d2231dc909e0a94021cca978a3 = L.marker(
+                [-33.4242129, -70.6046334],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_93ca7f5578f249dac0be5db5f73c4ce2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f6db92f677285ee9a0ea8d59a2b1c93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf9663f2616426433a959fac29db42fe = $(`<div id="html_bf9663f2616426433a959fac29db42fe" style="width: 100.0%; height: 100.0%;">Clínica WLK (clinic)</div>`)[0];
+                popup_7f6db92f677285ee9a0ea8d59a2b1c93.setContent(html_bf9663f2616426433a959fac29db42fe);
+            
+        
+
+        marker_e0fa07d2231dc909e0a94021cca978a3.bindPopup(popup_7f6db92f677285ee9a0ea8d59a2b1c93)
+        ;
+
+        
+    
+    
+                marker_e0fa07d2231dc909e0a94021cca978a3.setIcon(icon_93ca7f5578f249dac0be5db5f73c4ce2);
+            
+    
+            var marker_523d28860be9a9043b33cc673d4d24a4 = L.marker(
+                [-33.4198569, -70.61492],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_5a55eb57253f04934a3fd39af007a837 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_976e9f74039433610bcd410402d7e2c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_053e661b56711449994b74a33ec42b14 = $(`<div id="html_053e661b56711449994b74a33ec42b14" style="width: 100.0%; height: 100.0%;">Instituto Médico Cardiovascular - IMEC (clinic)</div>`)[0];
+                popup_976e9f74039433610bcd410402d7e2c2.setContent(html_053e661b56711449994b74a33ec42b14);
+            
+        
+
+        marker_523d28860be9a9043b33cc673d4d24a4.bindPopup(popup_976e9f74039433610bcd410402d7e2c2)
+        ;
+
+        
+    
+    
+                marker_523d28860be9a9043b33cc673d4d24a4.setIcon(icon_5a55eb57253f04934a3fd39af007a837);
+            
+    
+            var marker_320e9b2966ca5ba12f8816faad5f2096 = L.marker(
+                [-33.4126204, -70.6076828],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_24dfa43f0a3d5dfdf1fabe9221ff81e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9cb0318fd58f677803d4519e3e61c56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0e3c29e293592129c5e87c9d50a784e = $(`<div id="html_c0e3c29e293592129c5e87c9d50a784e" style="width: 100.0%; height: 100.0%;">Somedica (clinic)</div>`)[0];
+                popup_e9cb0318fd58f677803d4519e3e61c56.setContent(html_c0e3c29e293592129c5e87c9d50a784e);
+            
+        
+
+        marker_320e9b2966ca5ba12f8816faad5f2096.bindPopup(popup_e9cb0318fd58f677803d4519e3e61c56)
+        ;
+
+        
+    
+    
+                marker_320e9b2966ca5ba12f8816faad5f2096.setIcon(icon_24dfa43f0a3d5dfdf1fabe9221ff81e8);
+            
+    
+            var marker_598ba98b465f1404c2aa5b66336a1778 = L.marker(
+                [-33.4223094, -70.6080401],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_42b76d8c22cf415446497b89c64fb205 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d70561afc484b1e087878698de5faafb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d4c0332a1d78fd8d04179f7a94987f0 = $(`<div id="html_8d4c0332a1d78fd8d04179f7a94987f0" style="width: 100.0%; height: 100.0%;">Integramédica (hospital)</div>`)[0];
+                popup_d70561afc484b1e087878698de5faafb.setContent(html_8d4c0332a1d78fd8d04179f7a94987f0);
+            
+        
+
+        marker_598ba98b465f1404c2aa5b66336a1778.bindPopup(popup_d70561afc484b1e087878698de5faafb)
+        ;
+
+        
+    
+    
+                marker_598ba98b465f1404c2aa5b66336a1778.setIcon(icon_42b76d8c22cf415446497b89c64fb205);
+            
+    
+            var marker_f7b560fc681818b0867d2932407251f3 = L.marker(
+                [-33.4194909, -70.6163171],
+                {
+}
+            ).addTo(marker_cluster_0a64948af2c040a16728e43189ed9144);
+        
+    
+            var icon_c6161bd6d7fa05be534f41e2a2197126 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dabf56ed3bd2577e41b9546ac844746b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52d5653f04cf1174a92321027a27590e = $(`<div id="html_52d5653f04cf1174a92321027a27590e" style="width: 100.0%; height: 100.0%;">Clínica Indisa Centro Médico de Diálisis (clinic)</div>`)[0];
+                popup_dabf56ed3bd2577e41b9546ac844746b.setContent(html_52d5653f04cf1174a92321027a27590e);
+            
+        
+
+        marker_f7b560fc681818b0867d2932407251f3.bindPopup(popup_dabf56ed3bd2577e41b9546ac844746b)
+        ;
+
+        
+    
+    
+                marker_f7b560fc681818b0867d2932407251f3.setIcon(icon_c6161bd6d7fa05be534f41e2a2197126);
+            
+    
+            marker_cluster_0a64948af2c040a16728e43189ed9144.addTo(map_f92faa8c9e89474752a86502f816bc1c);
+        
+    
+            var marker_73a6471c3ea9c7ddc722fa7f0213504a = L.marker(
+                [-33.42041047098661, -70.60755484338485],
+                {
+}
+            ).addTo(map_f92faa8c9e89474752a86502f816bc1c);
+        
+    
+            var icon_895afe5b56cbcacc002d022edd344dd2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e8945b87cc6817e64718fa4f3ba8696b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fde0699a4bedae6d99b4f984260d5f26 = $(`<div id="html_fde0699a4bedae6d99b4f984260d5f26" style="width: 100.0%; height: 100.0%;"><b>📊 Services found:</b><br> - ➕ clinic: 22<br> - 🛒 supermarket: 7<br> - 🚆 station: 4<br> - 🏬 mall: 4<br> - 🏬 marketplace: 3<br> - ➕ hospital: 3<br> - ⛽ fuel: 3<br></div>`)[0];
+                popup_e8945b87cc6817e64718fa4f3ba8696b.setContent(html_fde0699a4bedae6d99b4f984260d5f26);
+            
+        
+
+        marker_73a6471c3ea9c7ddc722fa7f0213504a.bindPopup(popup_e8945b87cc6817e64718fa4f3ba8696b)
+        ;
+
+        
+    
+    
+                marker_73a6471c3ea9c7ddc722fa7f0213504a.setIcon(icon_895afe5b56cbcacc002d022edd344dd2);
+            
+</script>
+</html>

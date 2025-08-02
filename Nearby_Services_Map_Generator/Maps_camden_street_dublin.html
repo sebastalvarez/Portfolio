@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_30763cdf05a690e23acf7b86542118bb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_30763cdf05a690e23acf7b86542118bb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_30763cdf05a690e23acf7b86542118bb = L.map(
+                "map_30763cdf05a690e23acf7b86542118bb",
+                {
+                    center: [53.333084915022496, -6.265037493269493],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3877da4c0234385e1043badf19f2ded8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3877da4c0234385e1043badf19f2ded8.addTo(map_30763cdf05a690e23acf7b86542118bb);
+        
+    
+            var circle_7bd7f7ca4cda66d9c11b08bda8e7132b = L.circle(
+                [53.333084915022496, -6.265037493269493],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 3}
+            ).addTo(map_30763cdf05a690e23acf7b86542118bb);
+        
+    
+            var marker_e7dc5f147025a537b9b6eb14c3856631 = L.marker(
+                [53.333084915022496, -6.265037493269493],
+                {
+}
+            ).addTo(map_30763cdf05a690e23acf7b86542118bb);
+        
+    
+            var icon_842adf06cf6a5680c7e265980305b966 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e8bc6a6372968614160e5eb8c90f1ae7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9417da8cb2cd6b61dc7fccb1ee7cbec1 = $(`<div id="html_9417da8cb2cd6b61dc7fccb1ee7cbec1" style="width: 100.0%; height: 100.0%;">Initial Point</div>`)[0];
+                popup_e8bc6a6372968614160e5eb8c90f1ae7.setContent(html_9417da8cb2cd6b61dc7fccb1ee7cbec1);
+            
+        
+
+        marker_e7dc5f147025a537b9b6eb14c3856631.bindPopup(popup_e8bc6a6372968614160e5eb8c90f1ae7)
+        ;
+
+        
+    
+    
+                marker_e7dc5f147025a537b9b6eb14c3856631.setIcon(icon_842adf06cf6a5680c7e265980305b966);
+            
+    
+            var marker_cluster_502666b14d9809da70d786e97dec192c = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_e43e534310b5b8d68e374cebeaffeb16 = L.marker(
+                [53.3406175, -6.2658406],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_dbc1ef66ae6ccd714d104cbb13fb7fd9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fc3c971ba8a8b554964cc417e4534cb4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c0d660da8ce2af0ff9e62b20f0a707c = $(`<div id="html_6c0d660da8ce2af0ff9e62b20f0a707c" style="width: 100.0%; height: 100.0%;">Super Asia (supermarket)</div>`)[0];
+                popup_fc3c971ba8a8b554964cc417e4534cb4.setContent(html_6c0d660da8ce2af0ff9e62b20f0a707c);
+            
+        
+
+        marker_e43e534310b5b8d68e374cebeaffeb16.bindPopup(popup_fc3c971ba8a8b554964cc417e4534cb4)
+        ;
+
+        
+    
+    
+                marker_e43e534310b5b8d68e374cebeaffeb16.setIcon(icon_dbc1ef66ae6ccd714d104cbb13fb7fd9);
+            
+    
+            var marker_a8de6d57c5836fdecdc795b024e952ac = L.marker(
+                [53.3362914, -6.2651967],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_a17ad30bdd75f647497395c655672190 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d6ef56f9e81f46c2a67b5edda66e4b99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32bc986f8942998caeab60e04ea17d3d = $(`<div id="html_32bc986f8942998caeab60e04ea17d3d" style="width: 100.0%; height: 100.0%;">Fresh (supermarket)</div>`)[0];
+                popup_d6ef56f9e81f46c2a67b5edda66e4b99.setContent(html_32bc986f8942998caeab60e04ea17d3d);
+            
+        
+
+        marker_a8de6d57c5836fdecdc795b024e952ac.bindPopup(popup_d6ef56f9e81f46c2a67b5edda66e4b99)
+        ;
+
+        
+    
+    
+                marker_a8de6d57c5836fdecdc795b024e952ac.setIcon(icon_a17ad30bdd75f647497395c655672190);
+            
+    
+            var marker_4ddcefcf4db2b5b21d84fae1d3b5dd98 = L.marker(
+                [53.3256786, -6.2652818],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_7492e287bdce4a003a54b0a79abacd49 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_223f170d554d40dc6635bb49fcbd62b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74a161776e530a91632aa8d096e1e315 = $(`<div id="html_74a161776e530a91632aa8d096e1e315" style="width: 100.0%; height: 100.0%;">Lidl (supermarket)</div>`)[0];
+                popup_223f170d554d40dc6635bb49fcbd62b5.setContent(html_74a161776e530a91632aa8d096e1e315);
+            
+        
+
+        marker_4ddcefcf4db2b5b21d84fae1d3b5dd98.bindPopup(popup_223f170d554d40dc6635bb49fcbd62b5)
+        ;
+
+        
+    
+    
+                marker_4ddcefcf4db2b5b21d84fae1d3b5dd98.setIcon(icon_7492e287bdce4a003a54b0a79abacd49);
+            
+    
+            var marker_158b2179181dbcf7479ec63c370f75e7 = L.marker(
+                [53.3253249, -6.26489],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_7599deb563798b1e75c6ff076fa61d9e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_528c68a54a6f1d5d1f28879cd4c5d4a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5bb3dd906802f69f382e71ca66166318 = $(`<div id="html_5bb3dd906802f69f382e71ca66166318" style="width: 100.0%; height: 100.0%;">ALDI (supermarket)</div>`)[0];
+                popup_528c68a54a6f1d5d1f28879cd4c5d4a2.setContent(html_5bb3dd906802f69f382e71ca66166318);
+            
+        
+
+        marker_158b2179181dbcf7479ec63c370f75e7.bindPopup(popup_528c68a54a6f1d5d1f28879cd4c5d4a2)
+        ;
+
+        
+    
+    
+                marker_158b2179181dbcf7479ec63c370f75e7.setIcon(icon_7599deb563798b1e75c6ff076fa61d9e);
+            
+    
+            var marker_e91d7b14245c72f7465b726675cf91f9 = L.marker(
+                [53.3267806, -6.2650165],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_1ad35155a2c7ba50059009646d467756 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f2a8b1b1d6df1032800f361235b50281 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88d14906a56a2edaadb1cb7b6977cd52 = $(`<div id="html_88d14906a56a2edaadb1cb7b6977cd52" style="width: 100.0%; height: 100.0%;">Oriental Emporium (supermarket)</div>`)[0];
+                popup_f2a8b1b1d6df1032800f361235b50281.setContent(html_88d14906a56a2edaadb1cb7b6977cd52);
+            
+        
+
+        marker_e91d7b14245c72f7465b726675cf91f9.bindPopup(popup_f2a8b1b1d6df1032800f361235b50281)
+        ;
+
+        
+    
+    
+                marker_e91d7b14245c72f7465b726675cf91f9.setIcon(icon_1ad35155a2c7ba50059009646d467756);
+            
+    
+            var marker_a0fe0d1583de210b0adda021ceb004d8 = L.marker(
+                [53.342023, -6.2636804],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_e95eb915552b259d347a33040c7dedc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86cf45dcc95f402d8f491c27db9a5cf4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b68db6ca8c7cbccf86b1e96460e1ae44 = $(`<div id="html_b68db6ca8c7cbccf86b1e96460e1ae44" style="width: 100.0%; height: 100.0%;">Asia Market (supermarket)</div>`)[0];
+                popup_86cf45dcc95f402d8f491c27db9a5cf4.setContent(html_b68db6ca8c7cbccf86b1e96460e1ae44);
+            
+        
+
+        marker_a0fe0d1583de210b0adda021ceb004d8.bindPopup(popup_86cf45dcc95f402d8f491c27db9a5cf4)
+        ;
+
+        
+    
+    
+                marker_a0fe0d1583de210b0adda021ceb004d8.setIcon(icon_e95eb915552b259d347a33040c7dedc4);
+            
+    
+            var marker_fc277d26df301755921f126343168f5b = L.marker(
+                [53.3361087, -6.269095],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_7c6c19d2d81e68b372641756280b2eb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5322e27efcaf64506d7bc1ce726f7369 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd6af2e439aaf90493fbdfa32eb5c288 = $(`<div id="html_dd6af2e439aaf90493fbdfa32eb5c288" style="width: 100.0%; height: 100.0%;">Liberties Primary Care Team (clinic)</div>`)[0];
+                popup_5322e27efcaf64506d7bc1ce726f7369.setContent(html_dd6af2e439aaf90493fbdfa32eb5c288);
+            
+        
+
+        marker_fc277d26df301755921f126343168f5b.bindPopup(popup_5322e27efcaf64506d7bc1ce726f7369)
+        ;
+
+        
+    
+    
+                marker_fc277d26df301755921f126343168f5b.setIcon(icon_7c6c19d2d81e68b372641756280b2eb6);
+            
+    
+            var marker_00d9c3d8236f0bf18e9df6056a0c2440 = L.marker(
+                [53.3406704, -6.2636357],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_bfd89ebc179f5dcf3993e56c951108df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91d478ed282b2f105964db9d7451c46f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4d6d40b49f6bf5ff9ad3688761a94cd = $(`<div id="html_f4d6d40b49f6bf5ff9ad3688761a94cd" style="width: 100.0%; height: 100.0%;">Mercer's Medical Centre (clinic)</div>`)[0];
+                popup_91d478ed282b2f105964db9d7451c46f.setContent(html_f4d6d40b49f6bf5ff9ad3688761a94cd);
+            
+        
+
+        marker_00d9c3d8236f0bf18e9df6056a0c2440.bindPopup(popup_91d478ed282b2f105964db9d7451c46f)
+        ;
+
+        
+    
+    
+                marker_00d9c3d8236f0bf18e9df6056a0c2440.setIcon(icon_bfd89ebc179f5dcf3993e56c951108df);
+            
+    
+            var marker_6da7a9aa4f4dc2e4e61a62f78c18ca03 = L.marker(
+                [53.3407888, -6.2657741],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_3ab9bf3365d2a01e9a6ce195677c7ada = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce6d531af501f4f468e10928cd528e66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3ad9cbc9e12b1e7d64448af80f2b5c0 = $(`<div id="html_a3ad9cbc9e12b1e7d64448af80f2b5c0" style="width: 100.0%; height: 100.0%;">Lidl (supermarket)</div>`)[0];
+                popup_ce6d531af501f4f468e10928cd528e66.setContent(html_a3ad9cbc9e12b1e7d64448af80f2b5c0);
+            
+        
+
+        marker_6da7a9aa4f4dc2e4e61a62f78c18ca03.bindPopup(popup_ce6d531af501f4f468e10928cd528e66)
+        ;
+
+        
+    
+    
+                marker_6da7a9aa4f4dc2e4e61a62f78c18ca03.setIcon(icon_3ab9bf3365d2a01e9a6ce195677c7ada);
+            
+    
+            var marker_67d2c903aba99b1ef4da1a676705a293 = L.marker(
+                [53.3360808, -6.2696481],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_1718cdb437ee890b77b3f4c5ef1c2f2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed394e8d9ef00c6b6d095afe0849de36 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47251b7b0cd34b3d5981e922096d07ed = $(`<div id="html_47251b7b0cd34b3d5981e922096d07ed" style="width: 100.0%; height: 100.0%;">Gay Men's Health Service (clinic)</div>`)[0];
+                popup_ed394e8d9ef00c6b6d095afe0849de36.setContent(html_47251b7b0cd34b3d5981e922096d07ed);
+            
+        
+
+        marker_67d2c903aba99b1ef4da1a676705a293.bindPopup(popup_ed394e8d9ef00c6b6d095afe0849de36)
+        ;
+
+        
+    
+    
+                marker_67d2c903aba99b1ef4da1a676705a293.setIcon(icon_1718cdb437ee890b77b3f4c5ef1c2f2f);
+            
+    
+            var marker_2296acdb6c1785ae1c50c931cd33c60e = L.marker(
+                [53.339999, -6.2717289],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_4eb43b18cb3fa8ea481acd6cd769f31d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d26cc0607069d1c97b49ac8e0ade3a3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40e700207825faf8ce577ebe1cf5d90c = $(`<div id="html_40e700207825faf8ce577ebe1cf5d90c" style="width: 100.0%; height: 100.0%;">Books and Browsables Market (marketplace)</div>`)[0];
+                popup_d26cc0607069d1c97b49ac8e0ade3a3c.setContent(html_40e700207825faf8ce577ebe1cf5d90c);
+            
+        
+
+        marker_2296acdb6c1785ae1c50c931cd33c60e.bindPopup(popup_d26cc0607069d1c97b49ac8e0ade3a3c)
+        ;
+
+        
+    
+    
+                marker_2296acdb6c1785ae1c50c931cd33c60e.setIcon(icon_4eb43b18cb3fa8ea481acd6cd769f31d);
+            
+    
+            var marker_2ce6b0beb55e50ebee30549a001be0a6 = L.marker(
+                [53.3340034, -6.2559206],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_aff73a4127a58bb987aa81e8036b81a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b3b368d8147c4bc8e98ce1c6e6ae11d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae70b3f202de2a0d35132b4bd0faee11 = $(`<div id="html_ae70b3f202de2a0d35132b4bd0faee11" style="width: 100.0%; height: 100.0%;">Renew Skin Clinic (clinic)</div>`)[0];
+                popup_b3b368d8147c4bc8e98ce1c6e6ae11d1.setContent(html_ae70b3f202de2a0d35132b4bd0faee11);
+            
+        
+
+        marker_2ce6b0beb55e50ebee30549a001be0a6.bindPopup(popup_b3b368d8147c4bc8e98ce1c6e6ae11d1)
+        ;
+
+        
+    
+    
+                marker_2ce6b0beb55e50ebee30549a001be0a6.setIcon(icon_aff73a4127a58bb987aa81e8036b81a0);
+            
+    
+            var marker_fe8625e54b18b88c1e4abbc818afb466 = L.marker(
+                [53.34077, -6.2596746],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_6ae9aafc861687b6b47e07cb641cd9f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64568b72fb206358db41856b353facb2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8445074903891422d9fc076294d84077 = $(`<div id="html_8445074903891422d9fc076294d84077" style="width: 100.0%; height: 100.0%;">Fitzgerald Private Clinic (clothes)</div>`)[0];
+                popup_64568b72fb206358db41856b353facb2.setContent(html_8445074903891422d9fc076294d84077);
+            
+        
+
+        marker_fe8625e54b18b88c1e4abbc818afb466.bindPopup(popup_64568b72fb206358db41856b353facb2)
+        ;
+
+        
+    
+    
+                marker_fe8625e54b18b88c1e4abbc818afb466.setIcon(icon_6ae9aafc861687b6b47e07cb641cd9f0);
+            
+    
+            var marker_6761e27f2c43d9d7066eb53069641c85 = L.marker(
+                [53.3400145, -6.2623738],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_5bfe0252e4b28e2dc6e8e80e2e714cfb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db51b6308065cce1c0146cbfcd79b52e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17abeceebf20397b3ec524e95d2760e2 = $(`<div id="html_17abeceebf20397b3ec524e95d2760e2" style="width: 100.0%; height: 100.0%;">Stephen's Green Shopping Centre (mall)</div>`)[0];
+                popup_db51b6308065cce1c0146cbfcd79b52e.setContent(html_17abeceebf20397b3ec524e95d2760e2);
+            
+        
+
+        marker_6761e27f2c43d9d7066eb53069641c85.bindPopup(popup_db51b6308065cce1c0146cbfcd79b52e)
+        ;
+
+        
+    
+    
+                marker_6761e27f2c43d9d7066eb53069641c85.setIcon(icon_5bfe0252e4b28e2dc6e8e80e2e714cfb);
+            
+    
+            var marker_2af19080c00a79048588a9b59a717eee = L.marker(
+                [53.3285126, -6.2559102],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_d54d7f608ef8d46f30cf780a7b831267 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f581a921b90ad4f9efb30256b030e84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_387d63281317a00ee627227028dca939 = $(`<div id="html_387d63281317a00ee627227028dca939" style="width: 100.0%; height: 100.0%;">Northbrook Clinic (clinic)</div>`)[0];
+                popup_7f581a921b90ad4f9efb30256b030e84.setContent(html_387d63281317a00ee627227028dca939);
+            
+        
+
+        marker_2af19080c00a79048588a9b59a717eee.bindPopup(popup_7f581a921b90ad4f9efb30256b030e84)
+        ;
+
+        
+    
+    
+                marker_2af19080c00a79048588a9b59a717eee.setIcon(icon_d54d7f608ef8d46f30cf780a7b831267);
+            
+    
+            var marker_063e01ecfd307b862c6df1b7fd935084 = L.marker(
+                [53.3357254, -6.2701974],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_7fe45ce09f98eaa10225cd9b9c32b775 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7679829eee5f455ac55b80f0a7a991a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29b8690b5067db184cd551781661a91b = $(`<div id="html_29b8690b5067db184cd551781661a91b" style="width: 100.0%; height: 100.0%;">The Meath Primary Care Centre (Former Meath Hospital) (hospital)</div>`)[0];
+                popup_7679829eee5f455ac55b80f0a7a991a9.setContent(html_29b8690b5067db184cd551781661a91b);
+            
+        
+
+        marker_063e01ecfd307b862c6df1b7fd935084.bindPopup(popup_7679829eee5f455ac55b80f0a7a991a9)
+        ;
+
+        
+    
+    
+                marker_063e01ecfd307b862c6df1b7fd935084.setIcon(icon_7fe45ce09f98eaa10225cd9b9c32b775);
+            
+    
+            var marker_9594af10835ddbe9f62e9db1737c68af = L.marker(
+                [53.3328209, -6.2556581],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_47c3339f8ad9cb81444dc53069ee9f66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72fdb1308ad747b2b7a2d798659b4341 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3b3581105a329cb5b008549205cf8de = $(`<div id="html_e3b3581105a329cb5b008549205cf8de" style="width: 100.0%; height: 100.0%;">Royal Victoria Eye and Ear Hospital (hospital)</div>`)[0];
+                popup_72fdb1308ad747b2b7a2d798659b4341.setContent(html_e3b3581105a329cb5b008549205cf8de);
+            
+        
+
+        marker_9594af10835ddbe9f62e9db1737c68af.bindPopup(popup_72fdb1308ad747b2b7a2d798659b4341)
+        ;
+
+        
+    
+    
+                marker_9594af10835ddbe9f62e9db1737c68af.setIcon(icon_47c3339f8ad9cb81444dc53069ee9f66);
+            
+    
+            var marker_a6964386d09f136639748252903f267d = L.marker(
+                [53.3414051, -6.2588242],
+                {
+}
+            ).addTo(marker_cluster_502666b14d9809da70d786e97dec192c);
+        
+    
+            var icon_009180308d9c6742c62ef34467a925c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3b5dc20e2c94e0f194247499b805f369 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b65e9508279fba69cd6ca23e4f9c6143 = $(`<div id="html_b65e9508279fba69cd6ca23e4f9c6143" style="width: 100.0%; height: 100.0%;">Royal Hibernian Way (mall)</div>`)[0];
+                popup_3b5dc20e2c94e0f194247499b805f369.setContent(html_b65e9508279fba69cd6ca23e4f9c6143);
+            
+        
+
+        marker_a6964386d09f136639748252903f267d.bindPopup(popup_3b5dc20e2c94e0f194247499b805f369)
+        ;
+
+        
+    
+    
+                marker_a6964386d09f136639748252903f267d.setIcon(icon_009180308d9c6742c62ef34467a925c9);
+            
+    
+            marker_cluster_502666b14d9809da70d786e97dec192c.addTo(map_30763cdf05a690e23acf7b86542118bb);
+        
+    
+            var marker_bb36b812bd745230a29fb814527e29ce = L.marker(
+                [53.333084915022496, -6.265037493269493],
+                {
+}
+            ).addTo(map_30763cdf05a690e23acf7b86542118bb);
+        
+    
+            var icon_f88027b5249e5f0726a01d450451dea5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_697d3b4cc091f96ee32c80a6863b2d4e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6ba91a11ec1fe0971bd98f7df3bc547d = $(`<div id="html_6ba91a11ec1fe0971bd98f7df3bc547d" style="width: 100.0%; height: 100.0%;"><b>📊 Services found:</b><br> - 🛒 supermarket: 7<br> - ➕ clinic: 5<br> - 🏬 mall: 2<br> - ➕ hospital: 2<br> - 🏬 marketplace: 1<br> - 📍 clothes: 1<br></div>`)[0];
+                popup_697d3b4cc091f96ee32c80a6863b2d4e.setContent(html_6ba91a11ec1fe0971bd98f7df3bc547d);
+            
+        
+
+        marker_bb36b812bd745230a29fb814527e29ce.bindPopup(popup_697d3b4cc091f96ee32c80a6863b2d4e)
+        ;
+
+        
+    
+    
+                marker_bb36b812bd745230a29fb814527e29ce.setIcon(icon_f88027b5249e5f0726a01d450451dea5);
+            
+</script>
+</html>

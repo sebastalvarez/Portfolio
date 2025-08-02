@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b405e4c45eb24ea51c5c8e8fdd6c93d3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b405e4c45eb24ea51c5c8e8fdd6c93d3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b405e4c45eb24ea51c5c8e8fdd6c93d3 = L.map(
+                "map_b405e4c45eb24ea51c5c8e8fdd6c93d3",
+                {
+                    center: [55.94762055046183, -3.1953169518253586],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_80ce8ec822ae5360e0f1f2d8309d4de8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_80ce8ec822ae5360e0f1f2d8309d4de8.addTo(map_b405e4c45eb24ea51c5c8e8fdd6c93d3);
+        
+    
+            var circle_435d5dc17ee168c848f1e51101f19614 = L.circle(
+                [55.94762055046183, -3.1953169518253586],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 3}
+            ).addTo(map_b405e4c45eb24ea51c5c8e8fdd6c93d3);
+        
+    
+            var marker_52e9cbfa3cc61b49f9b4a0426c8fcb81 = L.marker(
+                [55.94762055046183, -3.1953169518253586],
+                {
+}
+            ).addTo(map_b405e4c45eb24ea51c5c8e8fdd6c93d3);
+        
+    
+            var icon_7305883d5ff400998ec2b67c3fb2bbe2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8fd90582336c2961c06ed5c22f535aaf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21ebb9844a1c8b2e1ad2c11ca68188b1 = $(`<div id="html_21ebb9844a1c8b2e1ad2c11ca68188b1" style="width: 100.0%; height: 100.0%;">Initial Point</div>`)[0];
+                popup_8fd90582336c2961c06ed5c22f535aaf.setContent(html_21ebb9844a1c8b2e1ad2c11ca68188b1);
+            
+        
+
+        marker_52e9cbfa3cc61b49f9b4a0426c8fcb81.bindPopup(popup_8fd90582336c2961c06ed5c22f535aaf)
+        ;
+
+        
+    
+    
+                marker_52e9cbfa3cc61b49f9b4a0426c8fcb81.setIcon(icon_7305883d5ff400998ec2b67c3fb2bbe2);
+            
+    
+            var marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_116ba0d9ea44a362823e6aad6819d84e = L.marker(
+                [55.9477632, -3.2035527],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_d21fec0c4deb65b920c4bac6de54d720 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cad16bec38b5e51a186bf1c62d6f0630 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ef13988a338ed8a53dced0823a89752 = $(`<div id="html_7ef13988a338ed8a53dced0823a89752" style="width: 100.0%; height: 100.0%;">Edinburgh Farmers' Market (marketplace)</div>`)[0];
+                popup_cad16bec38b5e51a186bf1c62d6f0630.setContent(html_7ef13988a338ed8a53dced0823a89752);
+            
+        
+
+        marker_116ba0d9ea44a362823e6aad6819d84e.bindPopup(popup_cad16bec38b5e51a186bf1c62d6f0630)
+        ;
+
+        
+    
+    
+                marker_116ba0d9ea44a362823e6aad6819d84e.setIcon(icon_d21fec0c4deb65b920c4bac6de54d720);
+            
+    
+            var marker_66151d4292fd9ff74250870ee479be6e = L.marker(
+                [55.9465986, -3.2023587],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_f654fec5cc6cbb12c78a65515bdd8fb9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_07a171c6e95cae4516661fc1b04de361 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f0e777e26958fe3ab1692a67158550f7 = $(`<div id="html_f0e777e26958fe3ab1692a67158550f7" style="width: 100.0%; height: 100.0%;">Spittal Street Clinic (clinic)</div>`)[0];
+                popup_07a171c6e95cae4516661fc1b04de361.setContent(html_f0e777e26958fe3ab1692a67158550f7);
+            
+        
+
+        marker_66151d4292fd9ff74250870ee479be6e.bindPopup(popup_07a171c6e95cae4516661fc1b04de361)
+        ;
+
+        
+    
+    
+                marker_66151d4292fd9ff74250870ee479be6e.setIcon(icon_f654fec5cc6cbb12c78a65515bdd8fb9);
+            
+    
+            var marker_0c1413bf0ecb7b098f37f23077c98935 = L.marker(
+                [55.9451748, -3.1864323],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_6e16a097ccf9752ca0287e5c4a250f03 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_26c3e630629997ad6d6b29c718f1a5a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d8109ccf9a5208b376cdb5589d4052f = $(`<div id="html_7d8109ccf9a5208b376cdb5589d4052f" style="width: 100.0%; height: 100.0%;">Maqbool's Supermarket (supermarket)</div>`)[0];
+                popup_26c3e630629997ad6d6b29c718f1a5a3.setContent(html_7d8109ccf9a5208b376cdb5589d4052f);
+            
+        
+
+        marker_0c1413bf0ecb7b098f37f23077c98935.bindPopup(popup_26c3e630629997ad6d6b29c718f1a5a3)
+        ;
+
+        
+    
+    
+                marker_0c1413bf0ecb7b098f37f23077c98935.setIcon(icon_6e16a097ccf9752ca0287e5c4a250f03);
+            
+    
+            var marker_3a9a8f79ef15a3acf043770b1a3be7b1 = L.marker(
+                [55.9446579, -3.2044205],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_86115d2c63e7d1a7e44795da5a7c30c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5e88ef93aa604b875d785ca3f7a26b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85d3dd44cf05bed37f9ffbe434909463 = $(`<div id="html_85d3dd44cf05bed37f9ffbe434909463" style="width: 100.0%; height: 100.0%;">City Health Clinic (clinic)</div>`)[0];
+                popup_f5e88ef93aa604b875d785ca3f7a26b8.setContent(html_85d3dd44cf05bed37f9ffbe434909463);
+            
+        
+
+        marker_3a9a8f79ef15a3acf043770b1a3be7b1.bindPopup(popup_f5e88ef93aa604b875d785ca3f7a26b8)
+        ;
+
+        
+    
+    
+                marker_3a9a8f79ef15a3acf043770b1a3be7b1.setIcon(icon_86115d2c63e7d1a7e44795da5a7c30c7);
+            
+    
+            var marker_c9be153eb6efda0798901df1c21fbdf7 = L.marker(
+                [55.9455833, -3.1843657],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_1d348ceeda119ecb9f45de8a5b1b5978 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7787dddf52d3331d7cc10fe0685f3f9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e922a6427bd296e8ec2e4468064a081e = $(`<div id="html_e922a6427bd296e8ec2e4468064a081e" style="width: 100.0%; height: 100.0%;">Lidl (supermarket)</div>`)[0];
+                popup_7787dddf52d3331d7cc10fe0685f3f9e.setContent(html_e922a6427bd296e8ec2e4468064a081e);
+            
+        
+
+        marker_c9be153eb6efda0798901df1c21fbdf7.bindPopup(popup_7787dddf52d3331d7cc10fe0685f3f9e)
+        ;
+
+        
+    
+    
+                marker_c9be153eb6efda0798901df1c21fbdf7.setIcon(icon_1d348ceeda119ecb9f45de8a5b1b5978);
+            
+    
+            var marker_5a4b3be548bb03410e0ec2190c4f5e66 = L.marker(
+                [55.9433502, -3.2028419],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_bdcb49a47678208f22d7a7410e7b435d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_472a50d58baba7f3ad59ff87cfc40bd1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7860ee11308023a5383e430a3a6b23c3 = $(`<div id="html_7860ee11308023a5383e430a3a6b23c3" style="width: 100.0%; height: 100.0%;">Brougham Foot Clinic (clinic)</div>`)[0];
+                popup_472a50d58baba7f3ad59ff87cfc40bd1.setContent(html_7860ee11308023a5383e430a3a6b23c3);
+            
+        
+
+        marker_5a4b3be548bb03410e0ec2190c4f5e66.bindPopup(popup_472a50d58baba7f3ad59ff87cfc40bd1)
+        ;
+
+        
+    
+    
+                marker_5a4b3be548bb03410e0ec2190c4f5e66.setIcon(icon_bdcb49a47678208f22d7a7410e7b435d);
+            
+    
+            var marker_f1f060ded2e574f423cbd6f987e1a3b0 = L.marker(
+                [55.9505074, -3.1894622],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_a2cf1416738cfbd439aa46b707002549 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_692d92d3babc14c90f072d6dd03aea7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_558f04bc8dd20e059bfe29fe38cf3dee = $(`<div id="html_558f04bc8dd20e059bfe29fe38cf3dee" style="width: 100.0%; height: 100.0%;">Crew Mind Altering (clinic)</div>`)[0];
+                popup_692d92d3babc14c90f072d6dd03aea7b.setContent(html_558f04bc8dd20e059bfe29fe38cf3dee);
+            
+        
+
+        marker_f1f060ded2e574f423cbd6f987e1a3b0.bindPopup(popup_692d92d3babc14c90f072d6dd03aea7b)
+        ;
+
+        
+    
+    
+                marker_f1f060ded2e574f423cbd6f987e1a3b0.setIcon(icon_a2cf1416738cfbd439aa46b707002549);
+            
+    
+            var marker_7ea0ed55842fa6d7c400fbdcbf1d0f4f = L.marker(
+                [55.9445315, -3.1823329],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_55b233e4f4d8b415a1b983b5306a1564 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e7ac34fcaa24244147fa1ca30a2aadd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9ff5decf457f7fda0d44730788a48ed = $(`<div id="html_f9ff5decf457f7fda0d44730788a48ed" style="width: 100.0%; height: 100.0%;">Ballenden House (clinic)</div>`)[0];
+                popup_7e7ac34fcaa24244147fa1ca30a2aadd.setContent(html_f9ff5decf457f7fda0d44730788a48ed);
+            
+        
+
+        marker_7ea0ed55842fa6d7c400fbdcbf1d0f4f.bindPopup(popup_7e7ac34fcaa24244147fa1ca30a2aadd)
+        ;
+
+        
+    
+    
+                marker_7ea0ed55842fa6d7c400fbdcbf1d0f4f.setIcon(icon_55b233e4f4d8b415a1b983b5306a1564);
+            
+    
+            var marker_aa3bf78006585932f7f3efc96e1bdfc4 = L.marker(
+                [55.9444724, -3.2041701],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_7c653d1a8501c4a3a5b6a48bd09778fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4b218e0774560b0bc9d792c6d96ef3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50fc98539185b7dd03630cfd4b123b21 = $(`<div id="html_50fc98539185b7dd03630cfd4b123b21" style="width: 100.0%; height: 100.0%;">Co-op Food (supermarket)</div>`)[0];
+                popup_d4b218e0774560b0bc9d792c6d96ef3d.setContent(html_50fc98539185b7dd03630cfd4b123b21);
+            
+        
+
+        marker_aa3bf78006585932f7f3efc96e1bdfc4.bindPopup(popup_d4b218e0774560b0bc9d792c6d96ef3d)
+        ;
+
+        
+    
+    
+                marker_aa3bf78006585932f7f3efc96e1bdfc4.setIcon(icon_7c653d1a8501c4a3a5b6a48bd09778fe);
+            
+    
+            var marker_2d1696fbcc638aefa0f9a3c2fbce0d39 = L.marker(
+                [55.943006, -3.2034471],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_1a645f66d11c2ab0f2338ed98a5ad0ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36e67488873e4d1bb77e5594c17c147f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5cf6f92f0775078727f0c1bd5485a7ab = $(`<div id="html_5cf6f92f0775078727f0c1bd5485a7ab" style="width: 100.0%; height: 100.0%;">ZM ZM Supermarket (supermarket)</div>`)[0];
+                popup_36e67488873e4d1bb77e5594c17c147f.setContent(html_5cf6f92f0775078727f0c1bd5485a7ab);
+            
+        
+
+        marker_2d1696fbcc638aefa0f9a3c2fbce0d39.bindPopup(popup_36e67488873e4d1bb77e5594c17c147f)
+        ;
+
+        
+    
+    
+                marker_2d1696fbcc638aefa0f9a3c2fbce0d39.setIcon(icon_1a645f66d11c2ab0f2338ed98a5ad0ee);
+            
+    
+            var marker_92c8325d8c1a111b9a19fc27da122e5c = L.marker(
+                [55.9499844, -3.1877367],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_c672aab18e8ba32f43e1c1e2651a322e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c24e0e7aeb141a588f10f199c2c3b4fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7c25946a221da5d0144ab0fd6365b3e = $(`<div id="html_d7c25946a221da5d0144ab0fd6365b3e" style="width: 100.0%; height: 100.0%;">Tron Kirk Market (marketplace)</div>`)[0];
+                popup_c24e0e7aeb141a588f10f199c2c3b4fc.setContent(html_d7c25946a221da5d0144ab0fd6365b3e);
+            
+        
+
+        marker_92c8325d8c1a111b9a19fc27da122e5c.bindPopup(popup_c24e0e7aeb141a588f10f199c2c3b4fc)
+        ;
+
+        
+    
+    
+                marker_92c8325d8c1a111b9a19fc27da122e5c.setIcon(icon_c672aab18e8ba32f43e1c1e2651a322e);
+            
+    
+            var marker_0402334fad04ab7baea9ad80e9990d17 = L.marker(
+                [55.9526419, -3.191535],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_2b075717c3e4452ac6c88ffd0206401c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f49eec1bce70af34206b2f5b3a5c541 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13ea6cb91addab71c3fe0bd436cf8b14 = $(`<div id="html_13ea6cb91addab71c3fe0bd436cf8b14" style="width: 100.0%; height: 100.0%;">NHS Vaccination Centre (clinic)</div>`)[0];
+                popup_5f49eec1bce70af34206b2f5b3a5c541.setContent(html_13ea6cb91addab71c3fe0bd436cf8b14);
+            
+        
+
+        marker_0402334fad04ab7baea9ad80e9990d17.bindPopup(popup_5f49eec1bce70af34206b2f5b3a5c541)
+        ;
+
+        
+    
+    
+                marker_0402334fad04ab7baea9ad80e9990d17.setIcon(icon_2b075717c3e4452ac6c88ffd0206401c);
+            
+    
+            var marker_07c99bb547304f3b6a659e3e7724ffbe = L.marker(
+                [55.9474983, -3.1960267],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_966f3082fff79f9cc899a9cc9ea8430c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f66bac43ab4da8bcf4dc7d96d9453341 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20b48cf6a7a0da0b9ca44558ee5f0d49 = $(`<div id="html_20b48cf6a7a0da0b9ca44558ee5f0d49" style="width: 100.0%; height: 100.0%;">Grassmarket Market (marketplace)</div>`)[0];
+                popup_f66bac43ab4da8bcf4dc7d96d9453341.setContent(html_20b48cf6a7a0da0b9ca44558ee5f0d49);
+            
+        
+
+        marker_07c99bb547304f3b6a659e3e7724ffbe.bindPopup(popup_f66bac43ab4da8bcf4dc7d96d9453341)
+        ;
+
+        
+    
+    
+                marker_07c99bb547304f3b6a659e3e7724ffbe.setIcon(icon_966f3082fff79f9cc899a9cc9ea8430c);
+            
+    
+            var marker_7dc147d58943079876f55ae1390fb7e8 = L.marker(
+                [55.9519018, -3.1904199],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_d5c40f5547d1673e0cb0c7ae2c35756f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_570a59d803433a7710f9b8ad41e3cb91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f898728f5cbd4b612bc9738899a9a28 = $(`<div id="html_5f898728f5cbd4b612bc9738899a9a28" style="width: 100.0%; height: 100.0%;">Edinburgh Waverley (station)</div>`)[0];
+                popup_570a59d803433a7710f9b8ad41e3cb91.setContent(html_5f898728f5cbd4b612bc9738899a9a28);
+            
+        
+
+        marker_7dc147d58943079876f55ae1390fb7e8.bindPopup(popup_570a59d803433a7710f9b8ad41e3cb91)
+        ;
+
+        
+    
+    
+                marker_7dc147d58943079876f55ae1390fb7e8.setIcon(icon_d5c40f5547d1673e0cb0c7ae2c35756f);
+            
+    
+            var marker_4a2a1f9af1576330c035974c2fef38ae = L.marker(
+                [55.9543842, -3.1974251],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_2bf43af04d5e38edb5f3064b9f4daa4d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b54adcb7b1e2a42ce3b0ee0eb12bdd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e68dfbfdcca9034d0c1ab3ff46322d70 = $(`<div id="html_e68dfbfdcca9034d0c1ab3ff46322d70" style="width: 100.0%; height: 100.0%;">The MOLE Clinic (clinic)</div>`)[0];
+                popup_1b54adcb7b1e2a42ce3b0ee0eb12bdd8.setContent(html_e68dfbfdcca9034d0c1ab3ff46322d70);
+            
+        
+
+        marker_4a2a1f9af1576330c035974c2fef38ae.bindPopup(popup_1b54adcb7b1e2a42ce3b0ee0eb12bdd8)
+        ;
+
+        
+    
+    
+                marker_4a2a1f9af1576330c035974c2fef38ae.setIcon(icon_2bf43af04d5e38edb5f3064b9f4daa4d);
+            
+    
+            var marker_995cc0eca8edac17f9670003d825d54c = L.marker(
+                [55.9518085, -3.1978038],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_abf1b0639075bd2b8b062adaed78f44b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd1fa2bc5d5b56f8d1a3fdabe19640d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55b38f99e372426f2e09348ee7b92675 = $(`<div id="html_55b38f99e372426f2e09348ee7b92675" style="width: 100.0%; height: 100.0%;">Princes Street (station)</div>`)[0];
+                popup_dd1fa2bc5d5b56f8d1a3fdabe19640d1.setContent(html_55b38f99e372426f2e09348ee7b92675);
+            
+        
+
+        marker_995cc0eca8edac17f9670003d825d54c.bindPopup(popup_dd1fa2bc5d5b56f8d1a3fdabe19640d1)
+        ;
+
+        
+    
+    
+                marker_995cc0eca8edac17f9670003d825d54c.setIcon(icon_abf1b0639075bd2b8b062adaed78f44b);
+            
+    
+            var marker_c747d2c2ccaceb7a293b4f9d6e00a446 = L.marker(
+                [55.9545216, -3.1922824],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_89ff1ac00cd801737e5d4fe956a5714d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_475f9cdbc172b27441f32dac95da4bbc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e2e83393158af1bb34580f853e76557 = $(`<div id="html_3e2e83393158af1bb34580f853e76557" style="width: 100.0%; height: 100.0%;">St Andrew Square (for Waverley) (station)</div>`)[0];
+                popup_475f9cdbc172b27441f32dac95da4bbc.setContent(html_3e2e83393158af1bb34580f853e76557);
+            
+        
+
+        marker_c747d2c2ccaceb7a293b4f9d6e00a446.bindPopup(popup_475f9cdbc172b27441f32dac95da4bbc)
+        ;
+
+        
+    
+    
+                marker_c747d2c2ccaceb7a293b4f9d6e00a446.setIcon(icon_89ff1ac00cd801737e5d4fe956a5714d);
+            
+    
+            var marker_09bbdfe47d981b40bffe27cd5159f6b2 = L.marker(
+                [55.9446218, -3.198122],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_158e1face81b799e8d2325f7d759a324 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62cc18c72a8b4e06ec328fc605a83ab3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b5c1f3cae92ec37e0ae85fae445c9f4 = $(`<div id="html_7b5c1f3cae92ec37e0ae85fae445c9f4" style="width: 100.0%; height: 100.0%;">Lothian Sexual Health (clinic)</div>`)[0];
+                popup_62cc18c72a8b4e06ec328fc605a83ab3.setContent(html_7b5c1f3cae92ec37e0ae85fae445c9f4);
+            
+        
+
+        marker_09bbdfe47d981b40bffe27cd5159f6b2.bindPopup(popup_62cc18c72a8b4e06ec328fc605a83ab3)
+        ;
+
+        
+    
+    
+                marker_09bbdfe47d981b40bffe27cd5159f6b2.setIcon(icon_158e1face81b799e8d2325f7d759a324);
+            
+    
+            var marker_12c788a2e8ea3397f195776c4a7fa6c8 = L.marker(
+                [55.9415159, -3.2039619],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_94a767e759227927cb15fd6b02ed72ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea49c69642afc5aec15881d06e8f8c0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_303f39af98bdcb736dcf9f2d216631b4 = $(`<div id="html_303f39af98bdcb736dcf9f2d216631b4" style="width: 100.0%; height: 100.0%;">Scotmid (supermarket)</div>`)[0];
+                popup_ea49c69642afc5aec15881d06e8f8c0c.setContent(html_303f39af98bdcb736dcf9f2d216631b4);
+            
+        
+
+        marker_12c788a2e8ea3397f195776c4a7fa6c8.bindPopup(popup_ea49c69642afc5aec15881d06e8f8c0c)
+        ;
+
+        
+    
+    
+                marker_12c788a2e8ea3397f195776c4a7fa6c8.setIcon(icon_94a767e759227927cb15fd6b02ed72ed);
+            
+    
+            var marker_44d4b965e8aed2a4d776385b9194b73a = L.marker(
+                [55.9399464, -3.2039286],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_ce6f099240f4d492a93201f34646f0db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "gas-pump",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00d95f79ccd533089d10067036cf2c2c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ad24209ad9e7729fd44f63d0b3bf8d7 = $(`<div id="html_6ad24209ad9e7729fd44f63d0b3bf8d7" style="width: 100.0%; height: 100.0%;">JET (fuel)</div>`)[0];
+                popup_00d95f79ccd533089d10067036cf2c2c.setContent(html_6ad24209ad9e7729fd44f63d0b3bf8d7);
+            
+        
+
+        marker_44d4b965e8aed2a4d776385b9194b73a.bindPopup(popup_00d95f79ccd533089d10067036cf2c2c)
+        ;
+
+        
+    
+    
+                marker_44d4b965e8aed2a4d776385b9194b73a.setIcon(icon_ce6f099240f4d492a93201f34646f0db);
+            
+    
+            var marker_ab16e2335a38ac931e84c5f6ba8b6e12 = L.marker(
+                [55.9445195, -3.1983556],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_ac419fbc257100d88ee7313a29c417f5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2628b137f59f11c1c6fac805310925ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f17468204be8856acdcdf810b08be9a8 = $(`<div id="html_f17468204be8856acdcdf810b08be9a8" style="width: 100.0%; height: 100.0%;">Chalmers Centre (hospital)</div>`)[0];
+                popup_2628b137f59f11c1c6fac805310925ab.setContent(html_f17468204be8856acdcdf810b08be9a8);
+            
+        
+
+        marker_ab16e2335a38ac931e84c5f6ba8b6e12.bindPopup(popup_2628b137f59f11c1c6fac805310925ab)
+        ;
+
+        
+    
+    
+                marker_ab16e2335a38ac931e84c5f6ba8b6e12.setIcon(icon_ac419fbc257100d88ee7313a29c417f5);
+            
+    
+            var marker_64115a3a3b4b75590b969e32455e4974 = L.marker(
+                [55.94412, -3.1981965],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_0531d095b7dde78832521165b6616d0d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43d3e2f82867944b9c2498ac9aa11fc0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83afb62bdd9bf47f47373af6a8a5ab27 = $(`<div id="html_83afb62bdd9bf47f47373af6a8a5ab27" style="width: 100.0%; height: 100.0%;">Princess Alexandra Eye Pavilion (hospital)</div>`)[0];
+                popup_43d3e2f82867944b9c2498ac9aa11fc0.setContent(html_83afb62bdd9bf47f47373af6a8a5ab27);
+            
+        
+
+        marker_64115a3a3b4b75590b969e32455e4974.bindPopup(popup_43d3e2f82867944b9c2498ac9aa11fc0)
+        ;
+
+        
+    
+    
+                marker_64115a3a3b4b75590b969e32455e4974.setIcon(icon_0531d095b7dde78832521165b6616d0d);
+            
+    
+            var marker_c24d648a135ae508ec82479887e743bc = L.marker(
+                [55.9443689, -3.1968024],
+                {
+}
+            ).addTo(marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60);
+        
+    
+            var icon_dd86c9ca6d6b78e397dfd17b001ce26c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10d555e54ca8b632f5794dd38387b8a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de12d3aa764ac46458dae4c56e054e4b = $(`<div id="html_de12d3aa764ac46458dae4c56e054e4b" style="width: 100.0%; height: 100.0%;">Lauriston Building (hospital)</div>`)[0];
+                popup_10d555e54ca8b632f5794dd38387b8a7.setContent(html_de12d3aa764ac46458dae4c56e054e4b);
+            
+        
+
+        marker_c24d648a135ae508ec82479887e743bc.bindPopup(popup_10d555e54ca8b632f5794dd38387b8a7)
+        ;
+
+        
+    
+    
+                marker_c24d648a135ae508ec82479887e743bc.setIcon(icon_dd86c9ca6d6b78e397dfd17b001ce26c);
+            
+    
+            marker_cluster_d6a9ce9a7a30525f2c605841c9cedc60.addTo(map_b405e4c45eb24ea51c5c8e8fdd6c93d3);
+        
+    
+            var marker_0cf5e81989aca64aeba3084749b87788 = L.marker(
+                [55.94762055046183, -3.1953169518253586],
+                {
+}
+            ).addTo(map_b405e4c45eb24ea51c5c8e8fdd6c93d3);
+        
+    
+            var icon_089772e29eda9747113b2ba7ddee1456 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72b28a3f4e24aab89dcfb37a78303fa0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b7668379d91c9297eea188d72c1cd036 = $(`<div id="html_b7668379d91c9297eea188d72c1cd036" style="width: 100.0%; height: 100.0%;"><b>📊 Services found:</b><br> - ➕ clinic: 8<br> - 🛒 supermarket: 5<br> - 🏬 marketplace: 3<br> - 🚆 station: 3<br> - ➕ hospital: 3<br> - ⛽ fuel: 1<br></div>`)[0];
+                popup_72b28a3f4e24aab89dcfb37a78303fa0.setContent(html_b7668379d91c9297eea188d72c1cd036);
+            
+        
+
+        marker_0cf5e81989aca64aeba3084749b87788.bindPopup(popup_72b28a3f4e24aab89dcfb37a78303fa0)
+        ;
+
+        
+    
+    
+                marker_0cf5e81989aca64aeba3084749b87788.setIcon(icon_089772e29eda9747113b2ba7ddee1456);
+            
+</script>
+</html>
